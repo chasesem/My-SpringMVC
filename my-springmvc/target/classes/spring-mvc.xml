@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+	<!-- 后端控制器的区域 -->
+	<bean name="/my" class="com.ben.web.controller.MyController" />
+	<!-- 辅助对象的区域 -->
+	<!-- HandlerMapping -->
+	<bean class="com.ben.web.servlet.BeanNameUrlHandlerMapping" />
+	<!-- HandlerAdapter -->
+	<bean class="com.ben.web.servlet.SimpleControllerHandlerAdapter" />
+	<!-- ViewResolver -->
+	<bean class="com.ben.web.servlet.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+</beans>
